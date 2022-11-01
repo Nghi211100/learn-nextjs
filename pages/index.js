@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import ShowMoreText from "react-show-more-text";
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData()
@@ -20,6 +21,19 @@ export default function Home({ allPostsData }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
+			<ShowMoreText
+                /* Default options */
+                lines={3}
+                more="Show more"
+                less="Show less"
+                className="content-css"
+                anchorClass="show-more-less-clickable"
+                expanded={false}
+                width={280}
+                truncatedEndingComponent={"... "}
+            >
+				asdfasdfa sdfasdfasdf asdfasdfasdf asdfasdfsa dfasdfasdfsdafasdfasdfsadfas dfsdafasdfasdfasdfsadf sadfasdfasdfasdf
+			</ShowMoreText>
 			<section className={utilStyles.headingMd}>
 				<p>[Your Self Introduction]</p>
 				<p>
